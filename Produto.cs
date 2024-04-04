@@ -4,10 +4,10 @@ public class Produto {
     private string descricao;
     private string categoria;
     public Produto(string nome, decimal preco, string descricao, string categoria){
-        Nome = nome;
-        Preco = preco;
-        Descricao = descricao;
-        Categoria = categoria;
+        this.nome = nome;
+        this.preco = preco;
+        this.descricao = descricao;
+        this.categoria = categoria;
     }
     public string Nome {
         get { return nome; }
@@ -28,22 +28,22 @@ public class Produto {
 }
 
 public class ConsoleGame: Produto{
-    private int propiedadearmazenamento;
+    private int propiedadeArmazenamento;
 
-    public Estudante(string nome; decimal preco; string descricao; string categoria; int propiedadearmazenamento;) : base(nome, preco, descricao, categoria){
-        PropiedadeArmazenamento = propiedadearmazenamento;
+    public ConsoleGame(string nome; decimal preco; string descricao; string categoria; int propiedadeArmazenamento;) : base(nome, preco, descricao, categoria){
+        PropiedadeArmazenamento = propiedadeArmazenamento;
     }
 
     public string PropiedadeArmazenamento{
-        get { return propiedadearmazenamento; }
-        set { propiedadearmazenamento = value; }
+        get { return propiedadeArmazenamento; }
+        set { propiedadeArmazenamento = value; }
     }
 }
 
 public class Jogo: Produto{
     private string genero;
 
-    public Jogo(string nome; decimal preco; string descricao; string categoria; int genero;) : base(nome, preco, descricao, categoria){
+    public Jogo(string nome; decimal preco; string descricao; string categoria; string genero;) : base(nome, preco, descricao, categoria){
         Genero = genero;
     }
 
@@ -56,7 +56,7 @@ public class Jogo: Produto{
 public class Acessorio: Produto{
     private string tipo;
 
-    public Tipo(string nome; decimal preco; string descricao; string categoria; string tipo;) : base(nome, preco, descricao, categoria){
+    public Acessorio(string nome; decimal preco; string descricao; string categoria; string tipo;) : base(nome, preco, descricao, categoria){
         Tipo = tipo;
     }
 
@@ -67,14 +67,28 @@ public class Acessorio: Produto{
 }
 
 public class Colecionavel: Produto{
-    private string edicaolimitada;
+    private bool edicaoLimitada;
 
-    public EdicaoLimitada(string nome; decimal preco; string descricao; string categoria; string edicaolimitada;) : base(nome, preco, descricao, categoria){
-        EdicaoLimitada = edicaolimitada;
+    public Colecionavel(string nome; decimal preco; string descricao; string categoria; bool edicaoLimitada;) : base(nome, preco, descricao, categoria){
+        EdicaoLimitada = edicaoLimitada;
     }
 
     public string EdicaoLimitada{
-        get { return edicaolimitada; }
-        set { edicaolimitada = value; }
+        get { return edicaoLimitada; }
+        set { edicaoLimitada = value; }
+    }
+}
+
+pubic class Program {
+    public static void main (string[] args) {
+
+        Produto produto;
+        produto = new ConsoleGame("XboxSeriesS", 2.800, "Console de Vídeo Game XboxSeries S com 500gb de armazenamento.", "Console", 500000);
+
+        Jogo jogo = new Jogo("Sekiro: Shadow Die Twice", 199.99, "Jogo completo Sekiro: Shadow Die Twice para Xbox Series X/S.", "Jogo", "Souls Like")
+
+        Acessorio acessorio = new Acessorio("Controle XboxSeries X/S", 410.00, "Controle XboxSeries X/S sem fio", "Controle", "Periférico")
+
+        Acessorio acessorio = new Acessorio("SEKIRO: SHADOWS DIE TWICE - Figure", 3999.99, "SEKIRO SHADOWS DIE TWICE 隻狼 狼 1/6スケール スタチュー", "Action Figure", "true")
     }
 }
