@@ -26,3 +26,16 @@ public class Produto {
         set { categoria = value; }
     }
 }
+
+public class ConsoleGame: Produto{
+    private int propiedadearmazenamento;
+
+    public Estudante(string nome; decimal preco; string descricao; string categoria; int propiedadearmazenamento;) : base(nome, preco, descricao, categoria){
+        PropiedadeArmazenamento = propiedadearmazenamento;
+    }
+
+    public string PropiedadeArmazenamento{
+        get { return propiedadearmazenamento; }
+        set { propiedadearmazenamento = value; }
+    }
+}
