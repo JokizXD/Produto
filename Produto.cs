@@ -89,6 +89,6 @@ pubic class Program {
 
         Acessorio acessorio = new Acessorio("Controle XboxSeries X/S", 410.00, "Controle XboxSeries X/S sem fio", "Controle", "Periférico")
 
-        Acessorio acessorio = new Acessorio("SEKIRO: SHADOWS DIE TWICE - Figure", 3999.99, "SEKIRO SHADOWS DIE TWICE 隻狼 狼 1/6スケール スタチュー", "Action Figure", "true")
+        Colecionavel colecionavel = new Colecionavel("SEKIRO: SHADOWS DIE TWICE - Figure", 3999.99, "SEKIRO SHADOWS DIE TWICE 隻狼 狼 1/6スケール スタチュー", "Action Figure", "true")
     }
 }
