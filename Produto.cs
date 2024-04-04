@@ -39,3 +39,16 @@ public class ConsoleGame: Produto{
         set { propiedadearmazenamento = value; }
     }
 }
+
+public class Jogo: Produto{
+    private string genero;
+
+    public Jogo(string nome; decimal preco; string descricao; string categoria; int genero;) : base(nome, preco, descricao, categoria){
+        Genero = genero;
+    }
+
+    public string Genero{
+        get { return genero }
+        set { genero = value }
+    }
+}
