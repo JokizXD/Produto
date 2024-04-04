@@ -65,3 +65,16 @@ public class Acessorio: Produto{
         set { tipo = value; }
     }
 }
+
+public class Colecionavel: Produto{
+    private string edicaolimitada;
+
+    public EdicaoLimitada(string nome; decimal preco; string descricao; string categoria; string edicaolimitada;) : base(nome, preco, descricao, categoria){
+        EdicaoLimitada = edicaolimitada;
+    }
+
+    public string EdicaoLimitada{
+        get { return edicaolimitada; }
+        set { edicaolimitada = value; }
+    }
+}
