@@ -52,3 +52,16 @@ public class Jogo: Produto{
         set { genero = value }
     }
 }
+
+public class Acessorio: Produto{
+    private string tipo;
+
+    public Tipo(string nome; decimal preco; string descricao; string categoria; string tipo;) : base(nome, preco, descricao, categoria){
+        Tipo = tipo;
+    }
+
+    public string Tipo{
+        get { return tipo; }
+        set { tipo = value; }
+    }
+}
